@@ -43,3 +43,4 @@ The following is a set of guidelines for contributing to WhatsApp Chat Exporter.
 
 By contributing, you agree that your contributions will be licensed under its MIT License.
 
+
