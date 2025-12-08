@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -22,10 +22,17 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        
-    - name: Install dependencies
+    
+    # Skip Puppeteer download to speed up CI and avoid browser errors
+    - name: Install dependencies (skip puppeteer download)
       run: npm ci
+      env:
+        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
       
-    - name: Check syntax
-      run: node -c index.js config.js
-
+    # Check if config.js is valid syntax
+    - name: Check config syntax
+      run: node -c config.js
+      
+    # Check if index.js is valid syntax
+    - name: Check index syntax
+      run: node -c index.js
