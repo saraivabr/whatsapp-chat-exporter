@@ -1,8 +1,31 @@
 {
   "name": "whatsapp-crm-robot",
   "version": "2.0.0",
-  "description": "WhatsApp CRM Extractor Bot",
+  "description": "Extract and export WhatsApp chat messages with phone numbers and keyword search to CSV",
   "main": "index.js",
+  "keywords": [
+    "whatsapp",
+    "whatsapp-web",
+    "whatsapp-api",
+    "chat-exporter",
+    "message-scraper",
+    "backup",
+    "crm",
+    "data-mining",
+    "puppeteer",
+    "automation",
+    "csv-export"
+  ],
+  "author": "Reza Mahdavi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RezaMahdaviiDev/whatsapp-chat-exporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RezaMahdaviiDev/whatsapp-chat-exporter/issues"
+  },
+  "homepage": "https://github.com/RezaMahdaviiDev/whatsapp-chat-exporter#readme",
   "scripts": {
     "start": "node index.js"
   },

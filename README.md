@@ -1,10 +1,24 @@
 # WhatsApp Chat Exporter
 
+![Banner](assets/banner.svg)
+
 ![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![WhatsApp Web.js](https://img.shields.io/badge/whatsapp--web.js-v1.23.0-green)
+![Build Status](https://img.shields.io/github/actions/workflow/status/RezaMahdaviiDev/whatsapp-chat-exporter/nodejs.yml)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 Extract and export WhatsApp chat messages with phone numbers and keyword search to CSV - Perfect for data analysis and conversation backup.
+
+## 📸 Screenshots
+
+<div align="center">
+  <!-- Add your screenshots here later -->
+  <img src="https://via.placeholder.com/800x400?text=Terminal+Output+Example" alt="Terminal Output" width="800"/>
+  <p><em>Real-time extraction process</em></p>
+</div>
+
+## ✨ Features
 
 ## ✨ Features
 

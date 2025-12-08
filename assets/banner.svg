@@ -1,0 +1,15 @@
+<svg width="1280" height="640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#128C7E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#075E54;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="640" cy="320" r="200" fill="#25D366" opacity="0.2"/>
+  <text x="640" y="280" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white" text-anchor="middle">WhatsApp</text>
+  <text x="640" y="380" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="#ECE5DD" text-anchor="middle">Chat Exporter</text>
+  <text x="640" y="450" font-family="Arial, sans-serif" font-size="30" fill="#ECE5DD" text-anchor="middle" opacity="0.8">Export • Backup • Analyze</text>
+  <!-- Simple chat bubble icon -->
+  <path d="M640 100 Q440 100 440 250 Q440 350 540 400 L540 480 L640 400 L640 400 Q840 400 840 250 Q840 100 640 100 Z" fill="none" stroke="white" stroke-width="10" opacity="0.1"/>
+</svg>
