@@ -12,8 +12,6 @@ Extract and export WhatsApp chat messages with phone numbers and keyword search 
 
 ## ✨ Features
 
-## ✨ Features
-
 - 🔍 **Keyword Search** - Search for specific keywords across all your WhatsApp chats
 - 📱 **Phone Number Extraction** - Automatically extract and save phone numbers from conversations
 - 📊 **Recent Messages** - Fetch recent messages from all chats with configurable limits
