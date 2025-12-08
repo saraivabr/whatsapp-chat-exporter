@@ -7,32 +7,21 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
 
     steps:
     - uses: actions/checkout@v3
-    
-    - name: Use Node.js ${{ matrix.node-version }}
+
+    - name: Use Node.js 18.x
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    
-    # Skip Puppeteer download to speed up CI and avoid browser errors
-    - name: Install dependencies (skip puppeteer download)
-      run: npm ci
-      env:
-        PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: true
-      
+        node-version: 18.x
+
     # Check if config.js is valid syntax
     - name: Check config syntax
       run: node -c config.js
-      
+
     # Check if index.js is valid syntax
     - name: Check index syntax
       run: node -c index.js
