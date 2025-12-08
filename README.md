@@ -10,14 +10,6 @@
 
 Extract and export WhatsApp chat messages with phone numbers and keyword search to CSV - Perfect for data analysis and conversation backup.
 
-## 📸 Screenshots
-
-<div align="center">
-  <!-- Add your screenshots here later -->
-  <img src="https://via.placeholder.com/800x400?text=Terminal+Output+Example" alt="Terminal Output" width="800"/>
-  <p><em>Real-time extraction process</em></p>
-</div>
-
 ## ✨ Features
 
 ## ✨ Features
