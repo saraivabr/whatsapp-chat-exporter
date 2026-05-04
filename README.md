@@ -8,161 +8,161 @@
 ![Build Status](https://img.shields.io/github/actions/workflow/status/RezaMahdaviiDev/whatsapp-chat-exporter/nodejs.yml)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-Extract and export WhatsApp chat messages with phone numbers and keyword search to CSV - Perfect for data analysis and conversation backup.
+Extraia e exporte mensagens do WhatsApp com números de telefone e busca por palavras-chave para CSV — ideal para análise de dados e backup de conversas.
 
-## ✨ Features
+## ✨ Funcionalidades
 
-- 🔍 **Keyword Search** - Search for specific keywords across all your WhatsApp chats
-- 📱 **Phone Number Extraction** - Automatically extract and save phone numbers from conversations
-- 📊 **Recent Messages** - Fetch recent messages from all chats with configurable limits
-- 📅 **Date Filtering** - Filter messages by age (days old)
-- 📈 **Activity Status** - Automatically categorize contacts as Active, Semi-active, or Inactive
-- 💾 **CSV Export** - Export all data to structured CSV files for easy analysis
-- ⚙️ **Highly Configurable** - Easy-to-use configuration file for all settings
-- 🚀 **Fast & Efficient** - Optimized for handling large numbers of chats
-- 📝 **Detailed Logging** - Real-time progress tracking and statistics
+- 🔍 **Busca por Palavras-chave** — Pesquise palavras-chave específicas em todas as suas conversas do WhatsApp
+- 📱 **Extração de Números de Telefone** — Extrai e salva automaticamente os números de telefone das conversas
+- 📊 **Mensagens Recentes** — Busca mensagens recentes de todas as conversas com limites configuráveis
+- 📅 **Filtro por Data** — Filtre mensagens por idade (em dias)
+- 📈 **Status de Atividade** — Categorize automaticamente contatos como Ativo, Semi-ativo ou Inativo
+- 💾 **Exportação CSV** — Exporte todos os dados para arquivos CSV estruturados para fácil análise
+- ⚙️ **Altamente Configurável** — Arquivo de configuração fácil de usar para todas as opções
+- 🚀 **Rápido e Eficiente** — Otimizado para lidar com grande número de conversas
+- 📝 **Log Detalhado** — Acompanhamento de progresso em tempo real com estatísticas
 
-## 📋 Prerequisites
+## 📋 Pré-requisitos
 
-- [Node.js](https://nodejs.org/) v14.0.0 or higher
-- A WhatsApp account
-- Active internet connection
+- [Node.js](https://nodejs.org/) v14.0.0 ou superior
+- Uma conta no WhatsApp
+- Conexão ativa com a internet
 
-## 🚀 Installation
+## 🚀 Instalação
 
-1. Clone the repository:
+1. Clone o repositório:
 ```bash
 git clone https://github.com/yourusername/whatsapp-chat-exporter.git
 cd whatsapp-chat-exporter
 ```
 
-2. Install dependencies:
+2. Instale as dependências:
 ```bash
 npm install
 ```
 
-3. Configure the bot by editing `config.js`:
+3. Configure o bot editando o arquivo `config.js`:
 ```javascript
 const CONFIG = {
-  KEYWORDS: ['example', 'keyword1', 'keyword2'],  // Add your keywords
-  MAX_RECENT_MESSAGES_TOTAL: 10,                  // Number of recent messages
-  MAX_CHATS_TO_PROCESS: 50,                       // Limit chats for faster testing
-  MAX_DAYS_OLD: 7,                                // Messages from last N days
-  // ... more settings
+  KEYWORDS: ['exemplo', 'palavra1', 'palavra2'],  // Adicione suas palavras-chave
+  MAX_RECENT_MESSAGES_TOTAL: 10,                  // Número de mensagens recentes
+  MAX_CHATS_TO_PROCESS: 50,                       // Limitar conversas para testes mais rápidos
+  MAX_DAYS_OLD: 7,                                // Mensagens dos últimos N dias
+  // ... mais configurações
 };
 ```
 
-## 🎯 Usage
+## 🎯 Uso
 
-1. Start the bot:
+1. Inicie o bot:
 ```bash
 npm start
 ```
 
-2. Scan the QR code with your WhatsApp mobile app:
-   - Open WhatsApp on your phone
-   - Go to Settings → Linked Devices
-   - Tap "Link a Device"
-   - Scan the QR code displayed in the terminal
+2. Escaneie o QR code com o aplicativo do WhatsApp no seu celular:
+   - Abra o WhatsApp no seu celular
+   - Vá em Configurações → Dispositivos conectados
+   - Toque em "Conectar um dispositivo"
+   - Escaneie o QR code exibido no terminal
 
-3. Wait for the bot to complete:
-   - The bot will search for your keywords
-   - Extract recent messages from chats
-   - Save everything to a CSV file
+3. Aguarde o bot concluir:
+   - O bot irá buscar suas palavras-chave
+   - Extrair mensagens recentes das conversas
+   - Salvar tudo em um arquivo CSV
 
-4. Find your exported data:
-   - Default file: `WhatsApp_CRM_Export.csv`
-   - Location: Project root directory
+4. Encontre os dados exportados:
+   - Arquivo padrão: `WhatsApp_CRM_Export.csv`
+   - Local: diretório raiz do projeto
 
-## ⚙️ Configuration
+## ⚙️ Configuração
 
-Edit `config.js` to customize the bot behavior:
+Edite o arquivo `config.js` para personalizar o comportamento do bot:
 
-### Basic Settings
+### Configurações Básicas
 
-| Setting | Description | Default |
-|---------|-------------|---------|
-| `KEYWORDS` | Array of keywords to search | `['example']` |
-| `EXPORT_FILE_NAME` | Output CSV filename | `'WhatsApp_CRM_Export.csv'` |
+| Configuração | Descrição | Padrão |
+|--------------|-----------|--------|
+| `KEYWORDS` | Array de palavras-chave para buscar | `['exemplo']` |
+| `EXPORT_FILE_NAME` | Nome do arquivo CSV de saída | `'WhatsApp_CRM_Export.csv'` |
 
-### Search Settings
+### Configurações de Busca
 
-| Setting | Description | Default |
-|---------|-------------|---------|
-| `MAX_RESULTS_PER_KEYWORD` | Max results per keyword | `1000` |
-| `TIMEOUT_MS` | Search timeout (ms) | `30000` |
-| `DELAY_BETWEEN_SEARCHES` | Delay between searches (ms) | `2000` |
+| Configuração | Descrição | Padrão |
+|--------------|-----------|--------|
+| `MAX_RESULTS_PER_KEYWORD` | Máximo de resultados por palavra-chave | `1000` |
+| `TIMEOUT_MS` | Tempo limite de busca (ms) | `30000` |
+| `DELAY_BETWEEN_SEARCHES` | Atraso entre buscas (ms) | `2000` |
 
-### Message Control
+### Controle de Mensagens
 
-| Setting | Description | Default |
-|---------|-------------|---------|
-| `MAX_RECENT_MESSAGES_TOTAL` | Total recent messages to fetch | `3` |
-| `MAX_RECENT_MESSAGES_PER_CHAT` | Messages per chat for selection | `2` |
-| `MAX_CHATS_TO_PROCESS` | Limit chats (0 = all) | `50` |
-| `MAX_TOTAL_MESSAGES` | Total message limit | `10` |
-| `MAX_DAYS_OLD` | Message age limit (days) | `7` |
+| Configuração | Descrição | Padrão |
+|--------------|-----------|--------|
+| `MAX_RECENT_MESSAGES_TOTAL` | Total de mensagens recentes a buscar | `3` |
+| `MAX_RECENT_MESSAGES_PER_CHAT` | Mensagens por conversa para seleção | `2` |
+| `MAX_CHATS_TO_PROCESS` | Limitar conversas (0 = todas) | `50` |
+| `MAX_TOTAL_MESSAGES` | Limite total de mensagens | `10` |
+| `MAX_DAYS_OLD` | Limite de idade das mensagens (dias) | `7` |
 
-## 📊 Output Format
+## 📊 Formato de Saída
 
-The CSV file includes the following columns:
+O arquivo CSV inclui as seguintes colunas:
 
-- **Search Keyword** - The keyword that matched (or `[Recent Messages]`)
-- **Contact Name** - Name of the contact or chat
-- **Phone Number** - Extracted phone number
-- **Chat Type** - Group or Personal
-- **Message Date** - When the message was sent
-- **Sender** - Who sent the message
-- **Message Content** - The message text (truncated to 500 chars)
-- **Message Type** - Type of message (chat, image, video, etc.)
-- **Activity Status** - 🟢 Active / 🟡 Semi-active / 🔴 Inactive
-- **Chat Name** - Full name of the chat
+- **Palavra-chave de Busca** — A palavra-chave que correspondeu (ou `[Mensagens Recentes]`)
+- **Nome do Contato** — Nome do contato ou da conversa
+- **Número de Telefone** — Número de telefone extraído
+- **Tipo de Conversa** — Grupo ou Pessoal
+- **Data da Mensagem** — Quando a mensagem foi enviada
+- **Remetente** — Quem enviou a mensagem
+- **Conteúdo da Mensagem** — Texto da mensagem (limitado a 500 caracteres)
+- **Tipo de Mensagem** — Tipo de mensagem (texto, imagem, vídeo, etc.)
+- **Status de Atividade** — 🟢 Ativo / 🟡 Semi-ativo / 🔴 Inativo
+- **Nome da Conversa** — Nome completo da conversa
 
-## 🔧 Troubleshooting
+## 🔧 Solução de Problemas
 
-### QR Code doesn't appear
-- Check your internet connection
-- Make sure port is not blocked by firewall
-- Try restarting the application
+### O QR code não aparece
+- Verifique sua conexão com a internet
+- Certifique-se de que a porta não está bloqueada pelo firewall
+- Tente reiniciar o aplicativo
 
-### Bot stops responding
-- Increase `TIMEOUT_MS` in config
-- Reduce `MAX_CHATS_TO_PROCESS` for testing
-- Check your internet connection
+### O bot para de responder
+- Aumente o valor de `TIMEOUT_MS` no arquivo de configuração
+- Reduza `MAX_CHATS_TO_PROCESS` para testes
+- Verifique sua conexão com a internet
 
-### Too slow / Too many messages
-- Reduce `MAX_CHATS_TO_PROCESS` (e.g., 20-50)
-- Reduce `MAX_RECENT_MESSAGES_PER_CHAT` (e.g., 2-5)
-- Reduce `MAX_DAYS_OLD` (e.g., 1-3 days)
-- Set `MAX_TOTAL_MESSAGES` to limit overall messages
+### Muito lento / Muitas mensagens
+- Reduza `MAX_CHATS_TO_PROCESS` (ex.: 20–50)
+- Reduza `MAX_RECENT_MESSAGES_PER_CHAT` (ex.: 2–5)
+- Reduza `MAX_DAYS_OLD` (ex.: 1–3 dias)
+- Defina `MAX_TOTAL_MESSAGES` para limitar o total de mensagens
 
-### No messages found
-- Increase `MAX_DAYS_OLD` to include older messages
-- Check if your keywords are correct
-- Verify WhatsApp connection is active
+### Nenhuma mensagem encontrada
+- Aumente `MAX_DAYS_OLD` para incluir mensagens mais antigas
+- Verifique se suas palavras-chave estão corretas
+- Confirme que a conexão com o WhatsApp está ativa
 
-## 🤝 Contributing
+## 🤝 Contribuindo
 
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um Pull Request. Para mudanças significativas, abra uma issue primeiro para discutir o que você deseja alterar.
 
-## 📝 License
+## 📝 Licença
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este projeto está licenciado sob a Licença MIT — veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## ⚠️ Disclaimer
+## ⚠️ Aviso Legal
 
-This tool is for educational and personal use only. Please respect WhatsApp's Terms of Service and privacy laws. The authors are not responsible for any misuse of this tool.
+Esta ferramenta é apenas para uso educacional e pessoal. Por favor, respeite os Termos de Serviço do WhatsApp e as leis de privacidade. Os autores não se responsabilizam por qualquer uso indevido desta ferramenta.
 
-## 🙏 Acknowledgments
+## 🙏 Agradecimentos
 
-- Built with [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js)
-- Uses [csv-writer](https://github.com/ryu1kn/csv-writer) for CSV export
-- QR code display with [qrcode-terminal](https://github.com/gtanner/qrcode-terminal)
+- Desenvolvido com [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js)
+- Usa [csv-writer](https://github.com/ryu1kn/csv-writer) para exportação CSV
+- Exibição do QR code com [qrcode-terminal](https://github.com/gtanner/qrcode-terminal)
 
-## 📧 Support
+## 📧 Suporte
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/yourusername/whatsapp-chat-exporter/issues/new) on GitHub.
+Se você encontrar algum problema ou tiver dúvidas, [abra uma issue](https://github.com/yourusername/whatsapp-chat-exporter/issues/new) no GitHub.
 
 ---
 
-Made with ❤️ by Reza Mahdavi
+Feito com ❤️ por Reza Mahdavi
