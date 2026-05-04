@@ -1,77 +1,77 @@
 // ==========================================
-// ⚙️ WHATSAPP CRM BOT - CONFIGURATION FILE
+// ⚙️ WHATSAPP CRM BOT - ARQUIVO DE CONFIGURAÇÃO
 // ==========================================
 //
-// این فایل شامل تمام تنظیمات ربات است
-// هر تنظیم را بر اساس نیاز خود تغییر دهید
+// Este arquivo contém todas as configurações do robô
+// Altere cada configuração conforme necessário
 //
 // ==========================================
 
 const CONFIG = {
   // ==========================================
-  // 📁 فایل خروجی
+  // 📁 Arquivo de saída
   // ==========================================
   EXPORT_FILE_NAME: 'WhatsApp_CRM_Export.csv',
 
   // ==========================================
-  // 🔍 تنظیمات جستجوی کلمات کلیدی
+  // 🔍 Configurações de busca por palavras-chave
   // ==========================================
 
-  // کلمات کلیدی که می‌خواهید جستجو کنید
-  // هر کلمه کلیدی را در یک خط جداگانه قرار دهید
+  // Palavras-chave que você deseja buscar
+  // Coloque cada palavra-chave em uma linha separada
   KEYWORDS: [
-    'example',  // نمونه - این را با کلمات کلیدی خود جایگزین کنید
-    // 'فروش',
-    // 'قیمت',
-    // 'مشاوره',
-    // هر تعداد کلمه کلیدی که می‌خواهید اضافه کنید
+    'exemplo',  // Exemplo - substitua pelas suas próprias palavras-chave
+    // 'venda',
+    // 'preço',
+    // 'consultoria',
+    // Adicione quantas palavras-chave quiser
   ],
 
-  // حداکثر تعداد نتایج برای هر کلمه کلیدی
-  // عدد بالاتر = نتایج بیشتر اما زمان طولانی‌تر
+  // Número máximo de resultados por palavra-chave
+  // Número maior = mais resultados, mas mais tempo
   MAX_RESULTS_PER_KEYWORD: 1000,
 
   // ==========================================
-  // 📨 تنظیمات پیام‌های اخیر (غیر جستجو)
+  // 📨 Configurações de mensagens recentes (sem busca)
   // ==========================================
 
-  // حداکثر تعداد پیام‌های اخیر از همه چت‌ها
-  // این پیام‌ها علاوه بر نتایج جستجو ذخیره می‌شوند
+  // Número máximo de mensagens recentes de todas as conversas
+  // Estas mensagens são salvas além dos resultados de busca
   MAX_RECENT_MESSAGES_TOTAL: 3,
 
-  // حداکثر پیام‌های اخیر از هر چت (برای انتخاب بهتر)
-  // عدد بالاتر = انتخاب بهتر پیام‌های اخیر، اما کندتر
+  // Máximo de mensagens recentes por conversa (para melhor seleção)
+  // Número maior = melhor seleção de mensagens recentes, mas mais lento
   MAX_RECENT_MESSAGES_PER_CHAT: 2,
 
-  // حداکثر تعداد چت‌ها برای پردازش (برای تست سریع‌تر)
-  // 0 = همه چت‌ها، عدد مثبت = محدود به این تعداد چت
+  // Número máximo de conversas a processar (para testes mais rápidos)
+  // 0 = todas as conversas, número positivo = limitado a este número
   MAX_CHATS_TO_PROCESS: 50,
 
-  // حداکثر پیام‌های کل (شامل جستجو + اخیر)
-  // اگر به این تعداد رسید، ذخیره متوقف می‌شود
+  // Máximo total de mensagens (incluindo busca + recentes)
+  // Se atingir este número, o salvamento é interrompido
   MAX_TOTAL_MESSAGES: 10,
 
-  // محدودیت پیام‌های قدیمی (بر اساس روز)
-  // فقط پیام‌های حداکثر این تعداد روز اخیر ذخیره می‌شوند
+  // Limite de idade das mensagens (em dias)
+  // Apenas mensagens dos últimos N dias são salvas
   MAX_DAYS_OLD: 7,
 
   // ==========================================
-  // ⏱️ تنظیمات زمان و عملکرد
+  // ⏱️ Configurações de tempo e desempenho
   // ==========================================
 
-  // زمان انتظار برای هر جستجو (میلی‌ثانیه)
-  // اگر اینترنت کند دارید، این عدد را افزایش دهید
+  // Tempo de espera para cada busca (milissegundos)
+  // Se sua internet for lenta, aumente este número
   TIMEOUT_MS: 30000,
 
-  // تاخیر بین جستجوهای مختلف (میلی‌ثانیه)
-  // برای جلوگیری از بلاک شدن توسط WhatsApp
+  // Atraso entre buscas diferentes (milissegundos)
+  // Para evitar bloqueio pelo WhatsApp
   DELAY_BETWEEN_SEARCHES: 2000,
 
   // ==========================================
-  // 🔧 تنظیمات پیشرفته (معمولاً تغییر ندهید)
+  // 🔧 Configurações avançadas (normalmente não altere)
   // ==========================================
 
-  // تنظیمات Puppeteer برای اجرای پایدار
+  // Configurações do Puppeteer para execução estável
   PUPPETEER_ARGS: [
     '--no-sandbox',
     '--disable-setuid-sandbox',
@@ -84,48 +84,48 @@ const CONFIG = {
 };
 
 // ==========================================
-// ⚠️  هشدار: این فایل را تغییر ندهید!
+// ⚠️  Atenção: Não altere esta parte do arquivo!
 // ==========================================
-// این بخش برای بررسی تنظیمات است و نباید تغییر کند
+// Esta seção verifica as configurações e não deve ser alterada
 
-// بررسی تنظیمات ضروری
+// Verificação das configurações obrigatórias
 if (!CONFIG.EXPORT_FILE_NAME) {
-  throw new Error('EXPORT_FILE_NAME is required');
+  throw new Error('EXPORT_FILE_NAME é obrigatório');
 }
 
 if (!Array.isArray(CONFIG.KEYWORDS)) {
-  throw new Error('KEYWORDS must be an array');
+  throw new Error('KEYWORDS deve ser um array');
 }
 
 if (CONFIG.MAX_RECENT_MESSAGES_TOTAL < 0) {
-  throw new Error('MAX_RECENT_MESSAGES_TOTAL cannot be negative');
+  throw new Error('MAX_RECENT_MESSAGES_TOTAL não pode ser negativo');
 }
 
 if (CONFIG.MAX_RECENT_MESSAGES_PER_CHAT < 1) {
-  throw new Error('MAX_RECENT_MESSAGES_PER_CHAT must be at least 1');
+  throw new Error('MAX_RECENT_MESSAGES_PER_CHAT deve ser pelo menos 1');
 }
 
 if (CONFIG.MAX_TOTAL_MESSAGES < 1) {
-  throw new Error('MAX_TOTAL_MESSAGES must be at least 1');
+  throw new Error('MAX_TOTAL_MESSAGES deve ser pelo menos 1');
 }
 
 if (CONFIG.MAX_DAYS_OLD < 1) {
-  throw new Error('MAX_DAYS_OLD must be at least 1');
+  throw new Error('MAX_DAYS_OLD deve ser pelo menos 1');
 }
 
 if (CONFIG.MAX_CHATS_TO_PROCESS < 0) {
-  throw new Error('MAX_CHATS_TO_PROCESS cannot be negative');
+  throw new Error('MAX_CHATS_TO_PROCESS não pode ser negativo');
 }
 
-console.log('✅ Configuration loaded successfully!');
-console.log(`📝 Keywords to search: ${CONFIG.KEYWORDS.length}`);
-console.log(`📨 Recent messages to fetch: ${CONFIG.MAX_RECENT_MESSAGES_TOTAL}`);
-console.log(`📊 Max messages per chat: ${CONFIG.MAX_RECENT_MESSAGES_PER_CHAT}`);
-console.log(`💬 Max chats to process: ${CONFIG.MAX_CHATS_TO_PROCESS === 0 ? 'All' : CONFIG.MAX_CHATS_TO_PROCESS}`);
-console.log(`🎯 Total message limit: ${CONFIG.MAX_TOTAL_MESSAGES}`);
-console.log(`📅 Max message age: ${CONFIG.MAX_DAYS_OLD} days`);
+console.log('✅ Configuração carregada com sucesso!');
+console.log(`📝 Palavras-chave para buscar: ${CONFIG.KEYWORDS.length}`);
+console.log(`📨 Mensagens recentes para buscar: ${CONFIG.MAX_RECENT_MESSAGES_TOTAL}`);
+console.log(`📊 Máximo de mensagens por conversa: ${CONFIG.MAX_RECENT_MESSAGES_PER_CHAT}`);
+console.log(`💬 Máximo de conversas a processar: ${CONFIG.MAX_CHATS_TO_PROCESS === 0 ? 'Todas' : CONFIG.MAX_CHATS_TO_PROCESS}`);
+console.log(`🎯 Limite total de mensagens: ${CONFIG.MAX_TOTAL_MESSAGES}`);
+console.log(`📅 Idade máxima das mensagens: ${CONFIG.MAX_DAYS_OLD} dias`);
 
 // ==========================================
-// خروجی تنظیمات
+// Exportação das configurações
 // ==========================================
 module.exports = CONFIG;
